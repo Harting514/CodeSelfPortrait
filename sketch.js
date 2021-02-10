@@ -7,6 +7,8 @@ function setup() {
 // Draw code goes here
 function draw() {
   background(255,202,100);
+
+  //Contour
   stroke('purple'); 
   strokeWeight(12);
   point(401,358);
@@ -79,28 +81,10 @@ function draw() {
   point(516,322);
   point(393,375);
 
-  
+  //Hat
   strokeWeight(8);
   point(436,310);
   point(464,309);
-
-  strokeWeight(10);
-  point(438,390);
-  point(475,389);
-
-
-  strokeWeight(5);
-  line(431,339, 419,376);
-  line(433,340, 453,375);
-  line(462,355, 478,369);
-  line(497,348,490,366);
-
-  strokeWeight(2);
-  line(429,410,431,416);
-  line(435,408,438,415);
-  line(484,397,485,405);
-  line(493,395,492,404);
-
   noFill();
   strokeWeight(3);
   strokeJoin(MITER);
@@ -109,7 +93,6 @@ function draw() {
   vertex(448,315);
   vertex(458,324);
   endShape();
-
   noFill();
   strokeWeight(3);
   strokeJoin(MITER);
@@ -118,7 +101,6 @@ function draw() {
   vertex(429,321);
   vertex(420,327);
   endShape();
-
   noFill();
   strokeWeight(3);
   strokeJoin(MITER);
@@ -127,25 +109,6 @@ function draw() {
   vertex(472,314);
   vertex(482,319);
   endShape();
-
-  noFill();
-  strokeWeight(3);
-  strokeJoin(MITER);
-  beginShape();
-  vertex(483,310);
-  vertex(472,314);
-  vertex(482,319);
-  endShape();
-
-  noFill();
-  strokeWeight(3);
-  strokeJoin(MITER);
-  beginShape();
-  vertex(451,407);
-  vertex(457,412);
-  vertex(469,405);
-  endShape();
-
   noFill();
   strokeWeight(3);
   strokeJoin(MITER);
@@ -157,4 +120,34 @@ function draw() {
   vertex(493,331);
   endShape();
 
+
+  //Eye
+  strokeWeight(10);
+  point(438,390);
+  point(475,389);
+
+  //Hair
+  strokeWeight(5);
+  line(431,339, 419,376);
+  line(433,340, 453,375);
+  line(462,355, 478,369);
+  line(497,348,490,366);
+
+  //Cheek
+  strokeWeight(2);
+  line(429,410,431,416);
+  line(435,408,438,415);
+  line(484,397,485,405);
+  line(493,395,492,404);
+
+
+  //Mouth
+  noFill();
+  strokeWeight(3);
+  strokeJoin(MITER);
+  beginShape();
+  vertex(451,407);
+  vertex(457,412);
+  vertex(469,405);
+  endShape();
 }
