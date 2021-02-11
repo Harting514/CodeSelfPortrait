@@ -5,26 +5,56 @@
     Overview 
     	This is Code Self-Portrait project. I interpret Self-Portrait using P5.js drawing functions. 
     	In this project, I learned from Pointillism, using points to compose facial contours, and then using lines to compose facial features and other parts.
- 
+ 		Also, I added color change code, The color change will make the picture look different (dynamic).
     ---------------------------------------------------------------------
     Notes: 
      (1) The JPEG of the hand drawn portrait included in Github file.
 **************************************************************************/
 
-
+//Set Color variable
+var r;
+var g;
+var b;
+var a;
 
 // Setup code goes here
 function setup() {
-  createCanvas(1200, 800);
- }
+  createCanvas(900, 800);
+  background('white');
+  x = 0;
+  speed = 3;
+}
 
 
 // Draw code goes here
 function draw() {
-  background(255, 202, 100);
+  
+  //Ball speed
+  x = x + speed;
+  if (x > width){
+  	speed *= -1;
+  }
 
-  //Contour
-  stroke('purple'); 
+  if (x == 0){
+    speed *= -1 ;
+  }
+
+  ellipse(x, 100, 40, 40);
+  ellipse(x, 600, 40, 40);
+
+
+
+  //Color change
+  r = random(255); 
+  g = random(100,200); 
+  b = random(100);
+  a = random(200,255); 
+  //Color change speed
+  if (frameCount % 60 == 0) {
+  	stroke(r, g, b, a);
+  }
+
+  //Contour 
   strokeWeight(12);
   point(401, 358);
   point(399, 383);
